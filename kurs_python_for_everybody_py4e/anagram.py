@@ -1,10 +1,15 @@
+""" first verison
 def is_anagram(word1, word2):
-    i = len(word2) - 1
-    for letter in word1:
-        if letter != word2[i]:
+    for i, letter in enumerate(word1):
+        if letter != word2[::-1]:
             return False
-        i -= 1
     return True
 
 
-print(is_anagram("kajak", "kajak"))
+print(is_anagram("", "a"))
+"""
+
+def is_anagram(word1, word2): return word1[::-1] == word2
+
+
+print(is_anagram("word", "drow"))
